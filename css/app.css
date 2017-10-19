@@ -1,0 +1,189 @@
+/*//////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////  GENERAL  ///////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////*/
+
+body {
+    background: rgba(0, 0, 0, 0) none repeat scroll !important;
+    font: 11px Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////  Application ///////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#app-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: wheat;
+    text-align: center;
+}
+
+#content-box {
+    width: 73%;
+    height: 70%;
+    border: 0px solid#bcb9b9;
+    display: none;
+    margin-top: 100px;
+    margin-left: 200px;
+}
+
+#content {
+    display: flex;
+}
+
+#img-box {
+    float: left;
+    height: 100%;
+    margin: 20px 50px;
+}
+
+#info-box {
+    margin: 20px 50px;
+    font-size: 20px;
+}
+
+#info-box .product {
+    display: inline-block;
+    margin: 30px;
+}
+
+.y-text {
+    height: 25px;
+    color: #b6bdb8 !important;
+    font-size: 20px;
+    caret-color: #12dc98;
+    /* background-image: -webkit-linear-gradient(bottom, #009688 1px, rgba(0, 150, 136, 0) 0), -webkit-linear-gradient(bottom, rgba(217, 192, 192, 0.26) 1px, transparent 0); */
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid #aca1a1;
+    outline: none;
+    background-color: transparent;
+    margin-left: 10px;
+}
+
+.y-text::-webkit-input-placeholder {
+    color: #b6bdb8;
+    font-size: 20px;
+}
+
+#product-name {
+    width: 652px;
+}
+
+#product-comment {
+    margin-left: 10px;
+    width: 650px;
+    height: 150px;
+    outline: none;
+    background-color: #525352;
+    border: 1px solid #525352;
+    color: #b6bdb8 !important;
+    font-size: 16px;
+    caret-color: #12dc98;
+}
+
+#operate-box {
+    /* margin-right: 50px; */
+    text-align: center;
+}
+
+.y-button {
+    width: 300px;
+    height: 48px;
+    border: 1px solid #525352;
+    color: #191919 !important;
+    background-color: #e7deb3 !important;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+/* #######################################################################################################################3 */
+
+#widget-box {
+    position: absolute;
+    height: 50px;
+    margin-right: 20px;
+    top: 30px;
+    right: 0px;
+}
+
+#widget-box #widget {
+    color: #939090;
+    font-size: 15px;
+}
+
+#widget-box #widget p {
+    margin-bottom: auto;
+    margin-left: auto;
+}
+
+.widget-animation {
+    transform: rotate(45deg);
+    transition: all 0.2s ease-in-out;
+}
+
+#widget-box #widget:hover {
+    cursor: pointer;
+    color: red;
+    /* animation: myAnimation 0.5s forwards; */
+}
+
+@keyframes myAnimation {
+    0% {
+        opacity: 0;
+        color: #b6bdb8;
+        transform: scale(1, 1);
+    }
+    20% {
+        opacity: 0.8;
+        color: #62a275;
+        transform: scale(1.1, 1.1);
+    }
+    40% {
+        opacity: 1;
+        color: #027ae4;
+        transform: scale(1.2, 1.2);
+    }
+    60% {
+        opacity: 1;
+        color: #4e0dc7;
+        transform: scale(1.3, 1.3);
+    }
+    80% {
+        opacity: 1;
+        color: #027ae4;
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        opacity: 1;
+        color: #009688;
+        transform: scale(1.1, 1.1);
+    }
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////  Popup       ///////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#popupBox {
+    padding: 30px;
+    width: 200px;
+    border: 1px red;
+    background-color: aliceblue;
+    float: right;
+    height: 300px;
+}
+
+#popupBox h1 {}

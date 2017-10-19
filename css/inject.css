@@ -1,0 +1,49 @@
+/*//////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////  EasySearch  ///////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#x-container {
+    background: rgba(0, 0, 0, 0) none repeat scroll !important;
+    right: 0px;
+    position: fixed;
+    z-index: 999999;
+    height: 100%;
+    top: 0px;
+}
+
+#x-container:hover {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #009688;
+}
+
+#x-iframe-app {
+    background: rgba(0, 0, 0, 0) none repeat scroll !important;
+    z-index: 20;
+    border-width: initial !important;
+    border-style: none !important;
+    border-color: initial !important;
+    border-image: initial !important;
+    width: 55px;
+    height: 100%;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////  EasySearch Style  //////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.body-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.body-scrollbar::-webkit-scrollbar-track {
+    border-radius: 200px;
+    background-color: #dde4e6;
+}
+
+.body-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #9fa9ac;
+    border-radius: 200px;
+}
