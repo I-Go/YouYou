@@ -28,7 +28,7 @@
             "*.", "*."
         ],
         "css": ["css/inject.css"],
-        "js": ["js/resource/jquery-3.2.1.min.js", "js/inject.js"],
+        "js": ["js/resource/jquery-3.2.1.min.js", "js/resource/util.js", "js/inject.js"],
         "run_at": "document_start"
 
     }],

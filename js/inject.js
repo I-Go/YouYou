@@ -8,8 +8,8 @@ var Inject = (function () {
     // variables ----------------------------------------------------------------
     var _this = {},
         _views = {},
-        _container = null;
-
+        _container = null,
+        _appUtil = {};
     // initialize ---------------------------------------------------------------
     _this.init = function () {
         // create the widget container
@@ -26,6 +26,9 @@ var Inject = (function () {
 
         // listen to the Control Center (background.js) messages
         chrome.extension.onMessage.addListener(background_onMessage);
+
+        //init Application meta data
+        _appUtil = new AppUtil.Init();
     };
 
     //================================================================================//
@@ -103,12 +106,39 @@ var Inject = (function () {
     //============================= private functions  ===============================//
     //================================================================================//
     function _collectDataFromCurrentPage() {
-        var image = $('#spec-n1 img')[0].src;
+        var meta = localStorage.getItem('AppMeta');
+        if (_appUtil.isEmpty(meta)) return;
+
+        var meta = JSON.parse(meta);
+        var domMeta = {};
+
+        var domain = document.domain;
+        switch (domain) {
+            case 'jd.com':
+                domMeta = meta.jd;
+                break;
+            case 'taobao.com':
+                domMeta = meta.taobao;
+                break;
+            case 'tmall.com':
+                domMeta = meta.tmall;
+                break;
+            case 'vip.com':
+                domMeta = meta.vip;
+                break;
+        }
+        var image = $(domMeta.image)[0].src;
+        var name = $.trim($(domMeta.name).text());
+        var price = $(domMeta.price).text();
 
         // notify channel:  inject->background->frame
-        tell('collect-data', {
+        tell('product-data', {
             view: '*',
-            image: image
+            data: {
+                image: image,
+                name: name,
+                price: price
+            }
         });
     }
 

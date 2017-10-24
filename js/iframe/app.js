@@ -30,26 +30,37 @@ var App = (function () {
         $('#widget').removeClass('widget-animation');
         $('#app-box').attr("is-open", 'off');
         // $('#img-box').empty();
-        _appData.image = [];
+        _appData.data = [];
         $('#content-box').hide();
     }
 
-    function _loadCurrentPageData2App() {
-        var image = _appData.image; // $('#spec-n1 img')[0].src;
-
-        var img = $('<img />', {
-            id: 'product-img',
-            src: image
-        });
+    function _loadProductData2App() {
+        // var image = _appData.data.image;
+        // var img = $('<img />', {
+        //     id: 'product-img',
+        //     src: image
+        // });
         // $('#img-box').append(img);
+        $("#product-img").attr("src", _appData.data.image);
+        $('#product-name').val(_appData.data.name);
+        $('#product-price').val(_appData.data.price);
+
+    }
+
+    function _loadVideoData2App() {
+
     }
 
     // events -------------------------------------------------------------------
     function onMessage(request) {
         switch (request.message) {
-            case 'collect-data':
+            case 'product-data':
                 _appData = request.data;
-                _loadCurrentPageData2App();
+                _loadProductData2App();
+                break;
+            case 'video-data':
+                _appData = request.data;
+                _loadVideoData2App();
                 break;
         }
     };
