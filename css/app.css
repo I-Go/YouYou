@@ -43,20 +43,26 @@ body * {
 #img-box {
     float: left;
     height: 100%;
+}
+
+#img-box img {
+    width: 350px;
     margin: 20px 50px;
 }
 
 #info-box {
-    margin: 20px 50px;
+    margin: 20px 20px 20px 20px;
     font-size: 20px;
+    text-align: left;
 }
 
 #info-box .product {
-    display: inline-block;
-    margin: 30px;
+    /* display: inline-block; */
+    margin-bottom: 50px;
 }
 
 .y-text {
+    width: 700px;
     height: 25px;
     color: #b6bdb8 !important;
     font-size: 20px;
@@ -76,14 +82,10 @@ body * {
     font-size: 20px;
 }
 
-#product-name {
-    width: 652px;
-}
-
 #product-comment {
     margin-left: 10px;
-    width: 650px;
-    height: 150px;
+    width: 700px;
+    height: 220px;
     outline: none;
     background-color: #525352;
     border: 1px solid #525352;
