@@ -18,14 +18,15 @@
                     <img id="product-img" src="">
                 </div>
                 <div id="info-box">
-
                     <div class="product">
                         <span>商品名称: </span>
                         <input type="text" id="product-name" class="y-text" placeholder="请输入商品名称">
                     </div>
-                    <div class="product">
+                    <div class="product" id="product-cate">
                         <span>商品分类: </span>
-                        <input type="text" id="product-cate" class="y-text" placeholder="请选择商品分类">
+                        <select id="product-cate1" class="product-cate1" data-value="-1" data-required="false" data-first-title="请选择一级分类"></select>
+                        <select id="product-cate2" class="product-cate2" data-value="-1" data-required="false" data-first-title="请选择二级分类"></select>
+                        <select id="product-cate3" class="product-cate3" data-value="-1" data-required="false" data-first-title="请选择三级分类"></select>
                     </div>
 
                     <div class="product">
@@ -54,6 +55,7 @@
     </div>
 </body>
 <script src="../../js/resource/jquery-3.2.1.min.js"></script>
+<script src="../../js/resource/jquery.cxselect.min.js"></script>
 <script src="../../js/iframe.js"></script>
 <script src="../../js/iframe/app.js"></script>
 

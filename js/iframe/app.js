@@ -45,6 +45,14 @@ var App = (function () {
         $('#product-name').val(_appData.data.name);
         $('#product-price').val(_appData.data.price);
 
+        $('#product-cate').cxSelect({
+            url: '../../js/resource/product.cate.json',
+            selects: ['product-cate1', 'product-cate2', 'product-cate3'], // 数组，请注意顺序
+            emptyStyle: 'none'
+            // jsonName: 'n',
+            // jsonValue: 'v'
+        });
+
     }
 
     function _loadVideoData2App() {

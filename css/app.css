@@ -61,6 +61,13 @@ body * {
     margin-bottom: 50px;
 }
 
+#product-cate>select {
+    margin-left: 10px;
+    background-color: #d5d9cd;
+    border: 0px;
+    width: 170px;
+}
+
 .y-text {
     width: 700px;
     height: 25px;
